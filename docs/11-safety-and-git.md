@@ -16,6 +16,7 @@ These are non-negotiable for every role.
 - **Current library docs before using an API** (Context7 MCP or the official docs). Model knowledge may be outdated. Pin versions in the version catalogue.
 - Check a library's licence and platform support before adding it.
 - Each session works in its **own git worktree** (`.worktrees/<role>`), branches from fresh `origin/main`.
+- **Merge from outside the repository** with `--repo`; `--delete-branch` inside a repo can remove another session's worktree.
 - Commands that validate, commit and merge are separate steps — a failed validation must not let a commit land on the wrong branch.
 - Large changes start with a short plan and approval.
 

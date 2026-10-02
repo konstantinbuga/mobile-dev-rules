@@ -15,6 +15,8 @@ The PO session is the hub. It talks to the owner, writes tasks, routes work, mer
 - Order work by dependency and risk: core logic before screens; screens after their design is merged; asset re-renders after the owner approves the look.
 - When a role is blocked on the owner (approval, an account, a click in a browser), the PO asks the owner **once, clearly**, and gives the role something else meanwhile.
 
+- **Sessions do nothing between messages.** Never leave a role on "wait": every message ends with the next item. When replies stop, check which sessions are running.
+
 ## The shared device lock
 
 There is usually **one emulator** for everyone.

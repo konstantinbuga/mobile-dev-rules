@@ -33,3 +33,6 @@ Each line: what happened → the rule it produced. Read this before starting; it
 21. The first time estimate was a week; the work took a day and a half → **estimate from measured pace**.
 22. Backlog statuses drifted far from reality → **update statuses when merging; refresh the backlog before giving estimates**.
 23. A rare case could not be verified because it appeared by chance → **debug deep links to any task by id and seed; debug clock offset**.
+24. `gh pr merge --delete-branch` run inside the local repository deleted the local branch together with another role's worktree where that branch was checked out → **the PO merges from outside any git repository (`gh pr merge N --repo owner/repo --squash --delete-branch`), so only the remote branch is deleted**.
+25. All three role sessions sat idle: each was told to "wait" for something → **after every merge or verdict give each role its next concrete item and something to do while waiting; check which sessions are running when replies stop**.
+26. A power cut stopped every session mid-work → **keep work in pushed branches and a current state snapshot; on restart, list open PRs and their CI before anything else**.
