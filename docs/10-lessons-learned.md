@@ -36,3 +36,20 @@ Each line: what happened → the rule it produced. Read this before starting; it
 24. `gh pr merge --delete-branch` run inside the local repository deleted the local branch together with another role's worktree where that branch was checked out → **the PO merges from outside any git repository (`gh pr merge N --repo owner/repo --squash --delete-branch`), so only the remote branch is deleted**.
 25. All three role sessions sat idle: each was told to "wait" for something → **after every merge or verdict give each role its next concrete item and something to do while waiting; check which sessions are running when replies stop**.
 26. A power cut stopped every session mid-work → **keep work in pushed branches and a current state snapshot; on restart, list open PRs and their CI before anything else**.
+
+## Budget, merging and checks (day 7)
+
+27. Hosted CI minutes of a private repository ran out in three days and checks silently stopped; the owner had not been told the service had a paid tier → **before adopting any service state its free tier and what happens at the limit; with a $0 budget run the full check locally before every merge** (`docs/12-local-checks-and-budget.md`).
+28. The first local merge script fetched `main` and the PR head in one command and checked out `FETCH_HEAD` — which was `main`; two PRs were merged without their own code being tested → **fetch the PR head into its own ref and assert the checked-out commit equals the PR head before testing**.
+29. Two merge queues were started in the same check worktree; files were locked and green PRs looked red → **one queue at a time (a lock); a killed run can leave a daemon holding files — retry before blaming the code**.
+30. A PR number was guessed instead of read from `gh pr create`; another role's PR was merged → **take the number from the command output**.
+31. Translation PRs were merged while eight code PRs were open; every open PR's localized screenshot baselines turned red, twice → **code first, strings and translations after; tell the Developer once**.
+32. Accepted PRs touching the same files conflicted again after each merge → **one integration branch: merge them together, resolve once, one PR, close the originals**.
+33. The owner was given PR numbers for decisions he could not see → **send the images and quote the strings in the chat**.
+34. A fishing vessel's day shape was a single cone (the motor-sailing signal) instead of two cones apex together; readability looked fine and QA first passed it → **check symbols against the rules table (count, orientation), not only readability**.
+35. A one-pass translation inverted a time limit and used a generic word for a domain term → **AI editor pass in the role of a native professional + blind back-translation + glossary** (`docs/13-translation.md`).
+36. A back-translation reviewer flagged four "rule errors"; three were false (it remembered an older edition), one revealed an imprecision present in every language → **re-check reviewer flags against the canonical text; fix real ones in all languages at once**.
+37. An outside reviewer that saw three files claimed there was no content validation (it runs in every check) → **weigh outside opinions against the whole repository; run a context-free independent review on a clean clone before milestones** (`docs/14-independent-review.md`).
+38. A consent sheet had a filled "Allow" and an outlined "Don't send" → **consent choices have equal visual weight; back/swipe means no; default off until answered**.
+39. A message to the Developer contained text meant for the PO → **a role ignores content addressed to someone else; the owner's accidental forwards are not tasks**.
+40. Content was translated before the code that shows that language's titles existed → **wire the language fallback first (any language field, fall back to the source language), then translate**.

@@ -19,6 +19,7 @@ This is the playbook that came out of a real project: a Kotlin Multiplatform + C
 
    Kick-off prompts for every role are in `templates/kickoff-prompts.md`.
 5. **The PO session orchestrates.** It writes tasks, routes work between sessions, merges PRs and reports to the owner. See `docs/03-orchestration.md`.
+6. **Start the PO as Jarvis** with `jarvis/BOOTSTRAP.md` — the complete, portable operating system of the PO/orchestrator (identity, standards, day one of a new app, daily loop, pipelines, memory seed).
 
 ---
 
@@ -37,9 +38,13 @@ This is the playbook that came out of a real project: a Kotlin Multiplatform + C
 | `docs/09-owner.md` | Working with the owner: reports, decisions with options, estimates, approvals |
 | `docs/10-lessons-learned.md` | Real mistakes and the rule each one produced |
 | `docs/11-safety-and-git.md` | Hard rules: git, secrets, processes, files, licences, library docs |
+| `docs/12-local-checks-and-budget.md` | $0 budget, free tiers, local merge pipeline instead of paid CI, merge order, integration branches |
+| `docs/13-translation.md` | AI editor pass + blind back-translation + glossary; verifying reviewer flags |
+| `docs/14-independent-review.md` | Context-free code review on a clean clone before milestones; static analysis |
+| `jarvis/` | Jarvis — the PO/orchestrator: `JARVIS.md` (operating system), `BOOTSTRAP.md` (first message), `MEMORY_SEED.md` (rules to write into memory) |
 | `roles/*.md` | One page per role, read by that role's session |
 | `profiles/kmp-compose/` | Kotlin Multiplatform + Compose: architecture, code style, testing, accessibility, localisation, tooling, emulator recipes |
-| `templates/` | `CLAUDE.md`, task, bug, ADR, PR, PO state snapshot, mechanics doc, kick-off prompts, project docs skeleton |
+| `templates/` | `CLAUDE.md`, task, bug, ADR, PR, PO state snapshot, mechanics doc, kick-off prompts, project docs skeleton, `merge_local.sh`, `INDEPENDENT_REVIEW_PROMPT.md`, `OWNER_CHECKLIST.md` |
 
 ---
 
@@ -52,7 +57,9 @@ This is the playbook that came out of a real project: a Kotlin Multiplatform + C
 5. **Data over code.** Rules, parameters and texts live in versioned content files with a status (`draft` / `approved`) and a validator in CI.
 6. **Readability over literal realism.** A training picture must be readable first; every deliberate deviation from reality is a labelled assumption.
 7. **Write it down.** Decisions → ADR. State → snapshot file. Lessons → playbook. A new session must reach the same quality without asking.
-8. **Protect the budget.** Agent usage limits are the real bottleneck. Keep sessions busy, but keep a reserve.
+8. **Protect the budget.** Money: $0 unless the owner says otherwise — name every service's free tier before using it. Agent usage limits are the real bottleneck: keep sessions busy, but keep a reserve.
+9. **Show, don't reference.** Decisions for the owner come with the images and exact texts in the chat, a recommendation and numbered options.
+10. **Verify domain facts twice.** The canonical text plus an independent official edition; AI reviewers' flags are re-checked against the text.
 
 ---
 

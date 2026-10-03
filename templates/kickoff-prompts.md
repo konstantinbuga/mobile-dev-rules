@@ -2,7 +2,7 @@
 
 Replace `<project>` and the task. Keep the first message short; the rules are in the files.
 
-**PO**
+**PO (Jarvis)** — preferred: the prompt in `jarvis/BOOTSTRAP.md`. Short form:
 > You are the PO of project <project>. Read CLAUDE.md, the rulebook https://github.com/konstantinbuga/mobile-dev-rules (README, docs/01–11, roles/po.md), then docs/00_README.md, docs/01_CONTRACT.md, docs/roles/PO.md, docs/roles/PO_PLAYBOOK.md and docs/reports/po-state.md. Then tell me in a few lines where we are and what you will do next.
 
 **Designer**
